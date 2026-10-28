@@ -28,7 +28,7 @@
         <div class="form-group">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
             <label class="nm-label" style="margin-bottom: 0;">Password</label>
-            <a href="#" style="font-size: 11.5px; color: #5b56a6; text-decoration: none;">Lupa password?</a>
+            <button type="button" onclick="window.ajoFramework ? window.ajoFramework.showToast('info', 'Reset Password', 'Instruksi pemulihan kata sandi telah dikirim ke email demo.') : alert('Instruksi pemulihan dikirim.')" style="background: none; border: none; padding: 0; font-size: 11.5px; color: #5b56a6; cursor: pointer;">Lupa password?</button>
           </div>
           <input type="password" class="nm-input" id="login_pass" placeholder="••••••••" required value="secret123">
         </div>

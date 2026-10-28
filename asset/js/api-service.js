@@ -5,8 +5,7 @@
  */
 class AjoApiService {
   constructor() {
-    this.useMock = true; // Set ke false jika REST API backend sudah tersedia
-    this.apiBaseUrl = "https://api.ajogalehlauak.com/v1"; // Endpoint produksi / staging
+    this.useMock = true; // Mode demo lokal murni (tanpa backend/API eksternal)
     this.tokenKey = "ajo_auth_token";
     this.initLocalStorage();
   }
@@ -47,52 +46,31 @@ class AjoApiService {
 
   // --- GENERIC CRUD ADAPTERS ---
   async getCollection(resourceKey) {
-    if (this.useMock) {
-      await this._simulateDelay(80);
-      return JSON.parse(localStorage.getItem(`ajo_${resourceKey}`)) || [];
-    }
-    const res = await fetch(`${this.apiBaseUrl}/${resourceKey}`, { headers: this.getHeaders() });
-    if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
-    return await res.json();
+    await this._simulateDelay(60);
+    return JSON.parse(localStorage.getItem(`ajo_${resourceKey}`)) || [];
   }
 
   async saveItem(resourceKey, item) {
-    if (this.useMock) {
-      await this._simulateDelay(120);
-      const items = await this.getCollection(resourceKey);
-      const idKey = item.id ? "id" : (item.sku ? "sku" : "orderId");
-      const index = items.findIndex(i => i[idKey] === item[idKey]);
+    await this._simulateDelay(80);
+    const items = await this.getCollection(resourceKey);
+    const idKey = item.id ? "id" : (item.sku ? "sku" : "orderId");
+    const index = items.findIndex(i => i[idKey] === item[idKey]);
 
-      if (index >= 0) {
-        items[index] = { ...items[index], ...item };
-      } else {
-        items.unshift(item);
-      }
-      localStorage.setItem(`ajo_${resourceKey}`, JSON.stringify(items));
-      return item;
+    if (index >= 0) {
+      items[index] = { ...items[index], ...item };
+    } else {
+      items.unshift(item);
     }
-    const method = item.id ? "PUT" : "POST";
-    const res = await fetch(`${this.apiBaseUrl}/${resourceKey}`, {
-      method,
-      headers: this.getHeaders(),
-      body: JSON.stringify(item)
-    });
-    return await res.json();
+    localStorage.setItem(`ajo_${resourceKey}`, JSON.stringify(items));
+    return item;
   }
 
   async deleteItem(resourceKey, idVal) {
-    if (this.useMock) {
-      await this._simulateDelay(100);
-      const items = await this.getCollection(resourceKey);
-      const filtered = items.filter(i => (i.id !== idVal && i.sku !== idVal && i.orderId !== idVal));
-      localStorage.setItem(`ajo_${resourceKey}`, JSON.stringify(filtered));
-      return { success: true, deletedId: idVal };
-    }
-    const res = await fetch(`${this.apiBaseUrl}/${resourceKey}/${idVal}`, {
-      method: "DELETE",
-      headers: this.getHeaders()
-    });
-    return await res.json();
+    await this._simulateDelay(80);
+    const items = await this.getCollection(resourceKey);
+    const filtered = items.filter(i => (i.id !== idVal && i.sku !== idVal && i.orderId !== idVal));
+    localStorage.setItem(`ajo_${resourceKey}`, JSON.stringify(filtered));
+    return { success: true, deletedId: idVal };
   }
 
   // --- NOTIFICATION SPECIFIC ADAPTERS ---

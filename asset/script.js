@@ -41,21 +41,46 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Topbar Search Click -> Open Command Palette
-  const searchBtn = document.querySelector('button[title="Pencarian Cepat"]');
-  if (searchBtn) {
-    searchBtn.addEventListener('click', () => {
+  const searchBtns = document.querySelectorAll('button[title*="Pencarian"], .topbar-btn[title*="Pencarian"], .icon-btn-neumorphic[title*="Pencarian"]');
+  searchBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       if (window.ajoFramework) window.ajoFramework.openCommandPalette();
     });
-  }
+  });
 
   // Topbar Notification Click -> Open Notification Center
-  const notifBtn = document.querySelector('button[title="Notifikasi Baru"]');
-  if (notifBtn) {
-    notifBtn.addEventListener('click', (e) => {
+  const notifBtns = document.querySelectorAll('button[title*="Notifikasi"], .notif-btn, .icon-btn-neumorphic[title*="Notifikasi"]');
+  notifBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
       e.stopPropagation();
+      e.preventDefault();
       if (window.ajoFramework) window.ajoFramework.openNotificationCenter();
     });
-  }
+  });
+
+  // Topbar Profile Dropdown Toggle
+  const profileBtns = document.querySelectorAll('.user-avatar-btn, .user-profile');
+  profileBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const parent = btn.closest('.user-profile-wrapper') || btn.parentElement;
+      const dropdown = parent ? parent.querySelector('.profile-dropdown-menu') : null;
+      if (dropdown) {
+        dropdown.classList.toggle('show');
+      } else if (window.location.pathname.split('/').pop() !== 'profile.html') {
+        window.location.href = 'profile.html';
+      }
+    });
+  });
+
+  // Close profile dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.user-profile-wrapper')) {
+      document.querySelectorAll('.profile-dropdown-menu.show').forEach(d => d.classList.remove('show'));
+    }
+  });
 
   // Modal open/close handlers
   const modalTriggers = document.querySelectorAll('[data-modal-target]');
