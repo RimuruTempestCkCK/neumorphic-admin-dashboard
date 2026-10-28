@@ -182,6 +182,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  cursor: pointer;
 }
 
 .submenu-arrow {
@@ -198,7 +199,7 @@ body {
 
 .submenu {
   list-style: none;
-  padding: 4px 0 4px 28px;
+  padding: 6px 0 6px 36px;
   display: none;
   flex-direction: column;
   gap: 4px;
@@ -211,21 +212,23 @@ body {
 }
 
 .nav-item.has-submenu.open > .submenu {
-  display: flex;
+  display: flex !important;
 }
 
 .submenu-item a {
   padding: 8px 12px !important;
-  font-size: 12.5px !important;
-  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 13px !important;
+  color: rgba(255, 255, 255, 0.75) !important;
   background: transparent !important;
   box-shadow: none !important;
   border-radius: 8px !important;
+  transition: all 0.2s ease;
+  display: block;
 }
 
 .submenu-item a:hover {
   color: #ffffff !important;
-  background: rgba(255, 255, 255, 0.1) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
 }
 
 .submenu-item.active a {

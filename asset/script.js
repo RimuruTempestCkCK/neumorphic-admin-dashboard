@@ -77,20 +77,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Submenu Accordion Toggle
-  const submenuTriggers = document.querySelectorAll('.nav-item.has-submenu > a');
-  submenuTriggers.forEach(trigger => {
-    trigger.addEventListener('click', (e) => {
-      // Hanya cegah default jika tidak dalam mode collapsed
-      const isCollapsed = container && container.classList.contains('sidebar-collapsed');
-      if (!isCollapsed) {
-        e.preventDefault();
-        const parentItem = trigger.closest('.nav-item.has-submenu');
-        if (parentItem) {
-          parentItem.classList.toggle('open');
+  // Submenu Accordion Toggle (Click on item with submenu or click on its link/arrow)
+  const submenuItems = document.querySelectorAll('.nav-item.has-submenu');
+  submenuItems.forEach(item => {
+    const trigger = item.querySelector('.submenu-toggle');
+    if (trigger) {
+      trigger.addEventListener('click', (e) => {
+        const isCollapsed = container && container.classList.contains('sidebar-collapsed');
+        if (!isCollapsed) {
+          e.preventDefault();
+          e.stopPropagation();
+          // Toggle open state on this submenu
+          item.classList.toggle('open');
         }
-      }
-    });
+      });
+    }
   });
 
   // Alert close handler
@@ -108,8 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Smooth link transitions
-  const internalLinks = document.querySelectorAll('a[href$=".html"]');
+  // Smooth link transitions (exclude submenu toggles)
+  const internalLinks = document.querySelectorAll('a[href$=".html"]:not(.submenu-toggle)');
   internalLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       const targetUrl = link.getAttribute('href');
