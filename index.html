@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - ajogalehlauak</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="asset/style.css">
+</head>
+<body>
+
+  <div class="dashboard-container">
+    <div class="sidebar-backdrop"></div>
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+      <div>
+        <div class="sidebar-header">
+          <div class="logo-text-wrapper">
+            <span class="logo-text-full">ajogalehlauak</span>
+            <span class="logo-text-short">ajo</span>
+          </div>
+        </div>
+
+        <div class="sidebar-section-title">MENU UTAMA</div>
+        <ul class="nav-menu">
+          <li class="nav-item active" data-tooltip="Dashboard">
+            <a href="index.html" title="Dashboard">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              <span>Dashboard</span>
+            </a>
+          </li>
+
+          <!-- Submenu: Statistik & Analitik -->
+          <li class="nav-item has-submenu" data-tooltip="Statistik & Analitik">
+            <a href="charts.html" title="Statistik & Analitik" class="submenu-toggle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>
+              <span>Daftar Chart</span>
+              <svg class="submenu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </a>
+            <ul class="submenu">
+              <li class="submenu-item"><a href="charts.html">Semua Chart</a></li>
+              <li class="submenu-item"><a href="charts.html">Penjualan Harian</a></li>
+              <li class="submenu-item"><a href="charts.html">Kapasitas Cold Storage</a></li>
+            </ul>
+          </li>
+
+          <!-- Submenu: Manajemen Data -->
+          <li class="nav-item has-submenu" data-tooltip="Data Tabel">
+            <a href="tables.html" title="Data Tabel" class="submenu-toggle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line><line x1="12" y1="3" x2="12" y2="21"></line></svg>
+              <span>Data Tabel</span>
+              <svg class="submenu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </a>
+            <ul class="submenu">
+              <li class="submenu-item"><a href="tables.html">Daftar Transaksi</a></li>
+              <li class="submenu-item"><a href="tables.html">Inventaris Rak</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item" data-tooltip="Form Input">
+            <a href="forms.html" title="Form Input">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+              <span>Form Input</span>
+            </a>
+          </li>
+          <li class="nav-item" data-tooltip="Variasi Tombol">
+            <a href="buttons.html" title="Variasi Tombol">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="6"></rect><circle cx="8" cy="12" r="3"></circle></svg>
+              <span>Variasi Tombol</span>
+            </a>
+          </li>
+          <li class="nav-item" data-tooltip="Halaman Blog">
+            <a href="blog.html" title="Artikel & Berita">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <span>Halaman Blog</span>
+            </a>
+          </li>
+          <li class="nav-item" data-tooltip="Profil Pengguna">
+            <a href="profile.html" title="Profil Pengguna">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              <span>Profil Pengguna</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="sidebar-section-title">HALAMAN ERROR</div>
+        <ul class="nav-menu">
+          <li class="nav-item" data-tooltip="Error 403"><a href="403.html"><span>Error 403 (Forbidden)</span></a></li>
+          <li class="nav-item" data-tooltip="Error 404"><a href="404.html"><span>Error 404 (Not Found)</span></a></li>
+          <li class="nav-item" data-tooltip="Error 500"><a href="500.html"><span>Error 500 (Internal Error)</span></a></li>
+          <li class="nav-item" data-tooltip="Error 503"><a href="503.html"><span>Error 503 (Maintenance)</span></a></li>
+        </ul>
+
+        <div class="sidebar-section-title">AUTENTIKASI</div>
+        <ul class="nav-menu">
+          <li class="nav-item" data-tooltip="Masuk">
+            <a href="login.html" title="Masuk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+              <span>Login</span>
+            </a>
+          </li>
+          <li class="nav-item" data-tooltip="Pendaftaran">
+            <a href="register.html" title="Pendaftaran">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+              <span>Register</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="timer-card">
+          <div class="timer-circle">
+            <svg class="timer-svg" viewBox="0 0 100 100">
+              <circle class="bg" cx="50" cy="50" r="44" />
+              <circle class="meter" cx="50" cy="50" r="44" />
+            </svg>
+            <div class="timer-text">00:56</div>
+            <div class="timer-sub">Waktu Sesi Aktif<br>Server Stabil</div>
+          </div>
+        </div>
+        <div class="sidebar-footer-text">Sistem Operasional v2.4</div>
+      </div>
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="main-content">
+      <!-- Top Navigation Header -->
+      <header class="top-header">
+        <div class="header-left">
+          <button class="sidebar-toggle-btn" title="Toggle Sidebar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <div class="header-actions">
+          <button class="icon-btn-neumorphic" title="Pencarian Cepat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+          
+          <button class="icon-btn-neumorphic" title="Notifikasi Baru" data-modal-target="popupDemo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            <span class="notification-badge">5</span>
+          </button>
+
+          <a href="profile.html" class="user-avatar-btn" title="Profil Jessica Miller">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80" alt="Avatar">
+          </a>
+        </div>
+      </header>
+
+      <!-- Navigasi Halaman (Di luar Topbar) -->
+      <div class="page-navigation-header">
+        <h1 class="page-title">Dashboard</h1>
+        <div class="page-breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="separator">/</span>
+          <span class="current">Dashboard</span>
+        </div>
+      </div>
+
+      <!-- Neumorphic Alert Sesuai Desain Tema -->
+      <div class="nm-alert nm-alert-success">
+        <div class="nm-alert-content">
+          <div class="nm-alert-icon">✓</div>
+          <div class="nm-alert-text">
+            <strong>Pembaruan Rantai Dingin Berhasil</strong>
+            Seluruh data tangkapan laut hari ini dari Muaro Padang dan Pariaman telah berhasil disinkronkan ke sistem.
+          </div>
+        </div>
+        <button class="nm-alert-close" title="Tutup Notifikasi">&times;</button>
+      </div>
+
+      <!-- Dashboard Inner Content Grid -->
+      <div class="dashboard-grid">
+        
+        <!-- Left Column -->
+        <div class="grid-col">
+          
+          <!-- Dropdown & Progress Bar 1 -->
+          <div class="nm-card">
+            <div class="metric-row">
+              <button class="nm-dropdown-btn">
+                <span>Target Bulanan</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <span class="percentage-text">78%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar yellow" style="width: 78%;"></div>
+            </div>
+          </div>
+
+          <!-- Dropdown & Progress Bar 2 -->
+          <div class="nm-card">
+            <div class="metric-row">
+              <button class="nm-dropdown-btn">
+                <span>Pesanan Selesai</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <span class="percentage-text">53%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar teal" style="width: 53%;"></div>
+            </div>
+          </div>
+
+          <!-- Dual Pink Mountain Charts -->
+          <div class="nm-card charts-dual-card">
+            <div class="dual-charts-wrapper">
+              <div class="chart-box">
+                <svg class="chart-svg" viewBox="0 0 160 90" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="pinkGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#f06a88" stop-opacity="0.8"/>
+                      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.1"/>
+                    </linearGradient>
+                  </defs>
+                  <polygon points="5,85 10,25 30,55 50,20 70,45 90,15 110,65 130,30 150,60 155,85" fill="url(#pinkGrad1)" />
+                  <polyline points="5,85 10,25 30,55 50,20 70,45 90,15 110,65 130,30 150,60 155,85" fill="none" stroke="#f06a88" stroke-width="2.5" stroke-linejoin="round" />
+                </svg>
+                <span class="chart-caption">Penjualan Ikan Basah</span>
+              </div>
+
+              <div class="chart-box">
+                <svg class="chart-svg" viewBox="0 0 160 90" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="pinkGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#f06a88" stop-opacity="0.8"/>
+                      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.1"/>
+                    </linearGradient>
+                  </defs>
+                  <polygon points="5,85 20,40 35,15 50,50 75,25 95,70 120,20 145,15 155,85" fill="url(#pinkGrad2)" />
+                  <polyline points="5,85 20,40 35,15 50,50 75,25 95,70 120,20 145,15 155,85" fill="none" stroke="#f06a88" stroke-width="2.5" stroke-linejoin="round" />
+                </svg>
+                <span class="chart-caption">Hasil Tangkapan Laut</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Wave Purple Area Chart -->
+          <div class="nm-card wave-chart-card">
+            <div class="wave-chart-container">
+              <div class="y-axis-labels">
+                <span>200</span>
+                <span>100</span>
+                <span>0</span>
+              </div>
+              <div class="wave-svg-wrapper">
+                <svg class="wave-svg" viewBox="0 0 380 90" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#7361a4" stop-opacity="0.7"/>
+                      <stop offset="100%" stop-color="#eef1f6" stop-opacity="0.05"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M 0,90 L 0,75 C 20,70 30,50 50,60 C 70,70 85,80 110,65 C 135,50 150,75 180,60 C 210,45 220,80 250,70 C 275,60 295,30 330,35 C 350,38 365,65 380,85 L 380,90 Z" fill="url(#purpleGrad)"/>
+                  <path d="M 0,75 C 20,70 30,50 50,60 C 70,70 85,80 110,65 C 135,50 150,75 180,60 C 210,45 220,80 250,70 C 275,60 295,30 330,35 C 350,38 365,65 380,85" fill="none" stroke="#7967ad" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column -->
+        <div class="grid-col">
+          
+          <!-- Quick Status Action Buttons -->
+          <div class="action-buttons-group">
+            <div class="btn-pill-action">
+              <div class="btn-label-status">
+                <span class="dot green"></span>
+                <span>Stok Gudang Aman</span>
+              </div>
+              <div class="sub-label">Pembaruan 5 menit lalu</div>
+              <button class="btn btn-teal btn-pill" data-modal-target="popupDemo">KONTROL</button>
+            </div>
+
+            <div class="btn-pill-action">
+              <div class="btn-label-status">
+                <span class="dot purple"></span>
+                <span>Distribusi Wilayah</span>
+              </div>
+              <div class="sub-label">12 Armada Terhubung</div>
+              <button class="btn btn-purple btn-pill" data-modal-target="popupDemo">ARMADA</button>
+            </div>
+          </div>
+
+          <!-- Middle Sub-Grid -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+            <div style="display: flex; flex-direction: column; gap: 18px;">
+              <!-- Donut Card -->
+              <div class="nm-card donut-info-card">
+                <div class="donut-wrapper">
+                  <svg class="donut-svg" viewBox="0 0 76 76">
+                    <circle cx="38" cy="38" r="32" fill="none" stroke="#e8edf5" stroke-width="6"/>
+                    <circle cx="38" cy="38" r="32" fill="none" stroke="#f06a88" stroke-width="6" stroke-dasharray="200" stroke-dashoffset="150" stroke-linecap="round"/>
+                  </svg>
+                  <div class="donut-percent">22%</div>
+                </div>
+                <div class="donut-details">
+                  <div class="donut-title">EFISIENSI LOGISTIK</div>
+                  <div class="donut-desc">Tingkat pengiriman tepat waktu rute Padang - Pekanbaru</div>
+                  <div class="donut-footer">
+                    <span class="donut-footer-val">91%</span>
+                    <span class="donut-footer-sub">Performa Optimal</span>
+                  </div>
+                  <div class="donut-bar-track">
+                    <div class="donut-bar-fill"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Triple Stack Bars -->
+              <div class="nm-card triple-bar-card">
+                <div class="stack-column purple-bars">
+                  <div class="stack-title">Pasar Pusat</div>
+                  <div class="stack-sub">Kota Padang</div>
+                  <div class="stack-bars">
+                    <div class="stack-bar-item"></div><div class="stack-bar-item"></div><div class="stack-bar-item"></div><div class="stack-bar-item"></div><div class="stack-bar-item"></div><div class="stack-bar-item"></div><div class="stack-bar-item"></div><div class="stack-bar-item"></div>
+                  </div>
+                </div>
+
+                <div class="stack-column teal-bars">
+                  <div class="stack-title">Cabang Bukittinggi</div>
+                  <div class="stack-sub">Pasar Atas</div>
+                  <div class="stack-bars">
+                    <div class="stack-bar-item"></div><div class="stack-bar-item"></div><div class="stack-bar-item"></div><div class="stack-bar-item"></div><div class="stack-bar-item"></div><div class="stack-bar-item"></div><div class="stack-bar-item"></div><div class="stack-bar-item"></div>
+                  </div>
+                </div>
+
+                <div class="stack-column yellow-bars">
+                  <div class="stack-title">Cabang Pariaman</div>
+                  <div class="stack-sub">Pelabuhan Muaro</div>
+                  <div class="stack-bars">
+                    <div class="stack-bar-item"></div><div class="stack-bar-item"></div><div class="stack-bar-item"></div><div class="stack-bar-item"></div><div class="stack-bar-item"></div><div class="stack-bar-item"></div><div class="stack-bar-item"></div><div class="stack-bar-item"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mini Equalizer -->
+              <div class="nm-card mini-equalizer-card">
+                <div class="eq-bars">
+                  <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+                </div>
+                <div class="eq-details">
+                  <div class="eq-title">SUHU COLD STORAGE</div>
+                  <div class="eq-desc">-18°C Ruang Pembekuan Stabil</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Calendar Widget -->
+            <div class="nm-card calendar-card">
+              <div class="calendar-header">
+                <span class="cal-month">OKTOBER 2026</span>
+                <div class="cal-arrows">
+                  <button class="arrow-btn" title="Bulan Sebelumnya">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  </button>
+                  <button class="arrow-btn" title="Bulan Selanjutnya">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="cal-days-grid">
+                <div class="cal-day-name">mg</div><div class="cal-day-name">sn</div><div class="cal-day-name">sl</div><div class="cal-day-name">rb</div><div class="cal-day-name">km</div><div class="cal-day-name">jm</div><div class="cal-day-name">sb</div>
+                <div class="cal-date muted">27</div><div class="cal-date muted">28</div><div class="cal-date muted">29</div><div class="cal-date muted">30</div><div class="cal-date">1</div><div class="cal-date">2</div><div class="cal-date">3</div>
+                <div class="cal-date">4</div><div class="cal-date">5</div><div class="cal-date">6</div><div class="cal-date">7</div><div class="cal-date">8</div><div class="cal-date">9</div><div class="cal-date">10</div>
+                <div class="cal-date">11</div><div class="cal-date">12</div><div class="cal-date">13</div><div class="cal-date">14</div><div class="cal-date">15</div><div class="cal-date active-circle">16</div><div class="cal-date">17</div>
+                <div class="cal-date">18</div><div class="cal-date">19</div><div class="cal-date">20</div><div class="cal-date active-circle">21</div><div class="cal-date">22</div><div class="cal-date">23</div><div class="cal-date">24</div>
+                <div class="cal-date">25</div><div class="cal-date">26</div><div class="cal-date">27</div><div class="cal-date active-teal">28</div><div class="cal-date">29</div><div class="cal-date">30</div><div class="cal-date">31</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dual Gauges -->
+          <div class="nm-card gauges-card">
+            <div class="gauge-item">
+              <div class="gauge-circle-outer">
+                <svg class="gauge-ring-svg" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="38" class="pink-arc" />
+                </svg>
+                <div class="gauge-circle-inner">
+                  <span class="gauge-small-label">Total Penjualan</span>
+                  <span class="gauge-value">3.230</span>
+                </div>
+              </div>
+              <div class="gauge-footer-title">Kg Ikan Terjual</div>
+              <div class="gauge-footer-sub">Bulan Ini</div>
+            </div>
+
+            <div class="gauge-item">
+              <div class="gauge-circle-outer">
+                <svg class="gauge-ring-svg" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="38" class="yellow-arc" />
+                </svg>
+                <div class="gauge-circle-inner">
+                  <span class="gauge-small-label">Pelanggan Aktif</span>
+                  <span class="gauge-value">2.768</span>
+                </div>
+              </div>
+              <div class="gauge-footer-title">Mitra Kuliner</div>
+              <div class="gauge-footer-sub">Restoran & Pasar</div>
+            </div>
+          </div>
+
+          <!-- Vertical Bar Chart -->
+          <div class="nm-card bar-chart-card">
+            <div class="bar-chart-container">
+              <div class="bar-y-axis">
+                <span>200</span>
+                <span>100</span>
+                <span>0</span>
+              </div>
+              <div class="bars-group">
+                <div class="v-bar b1" title="75 Ton"></div>
+                <div class="v-bar b2" title="45 Ton"></div>
+                <div class="v-bar b3" title="30 Ton"></div>
+                <div class="v-bar b4" title="85 Ton"></div>
+                <div class="v-bar b5" title="95 Ton"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Pop up / Modal Demo Component -->
+  <div class="nm-modal-backdrop" id="popupDemo">
+    <div class="nm-modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Konfirmasi Pengaturan</h3>
+        <button class="modal-close" data-modal-close>&times;</button>
+      </div>
+      <p style="color: var(--text-muted); font-size: 13.5px; line-height: 1.6;">
+        Apakah Anda ingin memperbarui data operasional dan menyinkronkan status stok ikan laut ke seluruh cabang hari ini?
+      </p>
+      <div class="modal-footer">
+        <button class="btn btn-nm" data-modal-close>Batal</button>
+        <button class="btn btn-teal" data-modal-close>Ya, Sinkronkan</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="asset/script.js"></script>
+</body>
+</html>
