@@ -40,6 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Topbar Dark Mode Toggle Button Click
+  const themeBtns = document.querySelectorAll('.theme-toggle-btn');
+  themeBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (window.ajoFramework) window.ajoFramework.toggleTheme();
+    });
+  });
+
   // Topbar Search Click -> Open Command Palette
   const searchBtns = document.querySelectorAll('button[title*="Pencarian"], .topbar-btn[title*="Pencarian"], .icon-btn-neumorphic[title*="Pencarian"]');
   searchBtns.forEach(btn => {
@@ -122,6 +132,10 @@ document.addEventListener('DOMContentLoaded', () => {
           e.stopPropagation();
           // Toggle open state on this submenu
           item.classList.toggle('open');
+        } else {
+          // If sidebar is collapsed, clicking expands sidebar so user can clearly view submenus
+          container.classList.remove('sidebar-collapsed');
+          item.classList.add('open');
         }
       });
     }

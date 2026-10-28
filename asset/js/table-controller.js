@@ -132,7 +132,7 @@ class AjoTableController {
   }
 
   renderTableBody() {
-    const tbody = document.getElementById(`${this.tableId}_tbody`);
+    const tbody = document.getElementById(`${this.tableId}_tbody`) || document.getElementById(`${this.tableId}_body`);
     if (!tbody) return;
 
     const pageRecords = this.getCurrentPageRecords();
@@ -211,7 +211,7 @@ class AjoTableController {
       countBadge.style.display = this.selectedIds.size > 0 ? "inline-block" : "none";
     }
 
-    const tbody = document.getElementById(`${this.tableId}_tbody`);
+    const tbody = document.getElementById(`${this.tableId}_tbody`) || document.getElementById(`${this.tableId}_body`);
     if (tbody) {
       tbody.querySelectorAll("tr").forEach(tr => {
         const id = tr.getAttribute("data-id");

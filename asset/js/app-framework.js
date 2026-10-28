@@ -25,6 +25,13 @@ class AjoFramework {
         this.applyTheme(e.matches ? "dark" : "light", false);
       }
     });
+
+    // Sync theme toggle buttons on DOM ready
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", () => this.syncThemeToggleButtons());
+    } else {
+      this.syncThemeToggleButtons();
+    }
   }
 
   applyTheme(themeName, save = true) {
@@ -40,12 +47,28 @@ class AjoFramework {
     }
 
     if (save) localStorage.setItem("ajo_theme", themeName);
+    this.syncThemeToggleButtons();
   }
 
   toggleTheme() {
     const isDark = document.body.classList.contains("dark-mode");
     this.applyTheme(isDark ? "light" : "dark", true);
     this.showToast("info", "Tema Diubah", `Beralih ke mode ${isDark ? "Terang" : "Gelap"}`);
+  }
+
+  syncThemeToggleButtons() {
+    const isDark = document.body.classList.contains("dark-mode");
+    const toggleBtns = document.querySelectorAll(".theme-toggle-btn");
+    toggleBtns.forEach(btn => {
+      btn.setAttribute("aria-label", isDark ? "Beralih ke Mode Terang" : "Beralih ke Mode Gelap");
+      btn.setAttribute("title", isDark ? "Beralih ke Mode Terang (Light Mode)" : "Beralih ke Mode Gelap (Dark Mode)");
+      const sunIcon = btn.querySelector(".icon-sun");
+      const moonIcon = btn.querySelector(".icon-moon");
+      if (sunIcon && moonIcon) {
+        sunIcon.style.display = isDark ? "block" : "none";
+        moonIcon.style.display = isDark ? "none" : "block";
+      }
+    });
   }
 
   /* ================= 2. TOAST NOTIFICATION SYSTEM ================= */
@@ -207,9 +230,8 @@ class AjoFramework {
       }
       html += `
         <div class="cmd-item ${idx === 0 ? "active" : ""}" data-index="${idx}">
-          <span class="cmd-item-icon">${cmd.icon}</span>
           <span class="cmd-item-title">${cmd.title}</span>
-          <span class="cmd-item-enter">↵</span>
+          <span class="cmd-item-enter">Buka &crarr;</span>
         </div>
       `;
     });
