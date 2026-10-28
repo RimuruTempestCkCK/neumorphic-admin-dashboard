@@ -19,10 +19,10 @@
         <p class="auth-subtitle">Masuk ke akun ajogalehlauak</p>
       </div>
 
-      <form action="index.html" method="GET">
+      <form id="loginForm" onsubmit="handleLoginSubmit(event)">
         <div class="form-group">
           <label class="nm-label">Email atau Username</label>
-          <input type="text" class="nm-input" placeholder="nama@email.com" required value="alexa@example.com">
+          <input type="text" class="nm-input" id="login_email" placeholder="nama@email.com" required value="jessica@ajogaleh.com">
         </div>
 
         <div class="form-group">
@@ -30,7 +30,7 @@
             <label class="nm-label" style="margin-bottom: 0;">Password</label>
             <a href="#" style="font-size: 11.5px; color: #5b56a6; text-decoration: none;">Lupa password?</a>
           </div>
-          <input type="password" class="nm-input" placeholder="••••••••" required value="secret123">
+          <input type="password" class="nm-input" id="login_pass" placeholder="••••••••" required value="secret123">
         </div>
 
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
@@ -67,5 +67,25 @@
     </div>
   </div>
 
+  <script src="asset/data/mock-data.js"></script>
+  <script src="asset/js/api-service.js"></script>
+  <script src="asset/js/app-framework.js"></script>
+  <script>
+    async function handleLoginSubmit(e) {
+      e.preventDefault();
+      const email = document.getElementById("login_email").value.trim();
+      const pass = document.getElementById("login_pass").value;
+
+      try {
+        const result = await window.ajoApi.login(email, pass);
+        window.ajoFramework.showToast("success", "Login Berhasil", `Selamat datang kembali, ${result.user.name}!`);
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 600);
+      } catch (err) {
+        window.ajoFramework.showToast("danger", "Autentikasi Gagal", err.message);
+      }
+    }
+  </script>
 </body>
 </html>

@@ -40,14 +40,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Calendar dates click
-  const calDates = document.querySelectorAll('.cal-date:not(.muted)');
-  calDates.forEach(date => {
-    date.addEventListener('click', () => {
-      calDates.forEach(d => d.classList.remove('active-teal'));
-      date.classList.add('active-teal');
+  // Topbar Search Click -> Open Command Palette
+  const searchBtn = document.querySelector('button[title="Pencarian Cepat"]');
+  if (searchBtn) {
+    searchBtn.addEventListener('click', () => {
+      if (window.ajoFramework) window.ajoFramework.openCommandPalette();
     });
-  });
+  }
+
+  // Topbar Notification Click -> Open Notification Center
+  const notifBtn = document.querySelector('button[title="Notifikasi Baru"]');
+  if (notifBtn) {
+    notifBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (window.ajoFramework) window.ajoFramework.openNotificationCenter();
+    });
+  }
 
   // Modal open/close handlers
   const modalTriggers = document.querySelectorAll('[data-modal-target]');

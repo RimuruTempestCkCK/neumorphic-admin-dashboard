@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Koleksi Tabel Data - ajogalehlauak</title>
+  <title>Koleksi Data Tabel - ajogalehlauak</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -26,78 +26,40 @@
 
         <div class="sidebar-section-title">MENU UTAMA</div>
         <ul class="nav-menu">
-          <li class="nav-item" data-tooltip="Dashboard">
-            <a href="index.html" title="Dashboard">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-              <span>Dashboard</span>
-            </a>
-          </li>
-
-          <!-- Submenu: Statistik & Analitik -->
+          <li class="nav-item" data-tooltip="Dashboard"><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><span>Dashboard</span></a></li>
           <li class="nav-item has-submenu" data-tooltip="Statistik & Analitik">
-            <a href="charts.html" title="Statistik & Analitik" class="submenu-toggle">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>
-              <span>Daftar Chart</span>
-              <svg class="submenu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-            </a>
+            <a href="charts.html" class="submenu-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg><span>Daftar Chart</span><svg class="submenu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
             <ul class="submenu">
               <li class="submenu-item"><a href="charts.html">Semua Chart</a></li>
               <li class="submenu-item"><a href="charts.html#spline">Penjualan Harian</a></li>
               <li class="submenu-item"><a href="charts.html#gauges">Kapasitas Gudang</a></li>
             </ul>
           </li>
-
-          <!-- Submenu: Manajemen Data -->
           <li class="nav-item has-submenu active open" data-tooltip="Data Tabel">
-            <a href="tables.html" title="Data Tabel" class="submenu-toggle">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line><line x1="12" y1="3" x2="12" y2="21"></line></svg>
-              <span>Data Tabel</span>
-              <svg class="submenu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-            </a>
+            <a href="tables.html" class="submenu-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line><line x1="12" y1="3" x2="12" y2="21"></line></svg><span>Data Tabel</span><svg class="submenu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
             <ul class="submenu">
               <li class="submenu-item active"><a href="tables.html">Daftar Transaksi</a></li>
-              <li class="submenu-item"><a href="tables.html#inventory">Inventaris Rak</a></li>
+              <li class="submenu-item"><a href="#inventorySection">Inventaris Rak</a></li>
             </ul>
           </li>
-
-          <li class="nav-item" data-tooltip="Form Input">
-            <a href="forms.html" title="Form Input">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-              <span>Form Input</span>
-            </a>
-          </li>
-          <li class="nav-item" data-tooltip="Variasi Tombol">
-            <a href="buttons.html" title="Variasi Tombol">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="6"></rect><circle cx="8" cy="12" r="3"></circle></svg>
-              <span>Variasi Tombol</span>
-            </a>
-          </li>
-          <li class="nav-item" data-tooltip="Halaman Blog">
-            <a href="blog.html" title="Artikel & Berita">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-              <span>Halaman Blog</span>
-            </a>
-          </li>
-          <li class="nav-item" data-tooltip="Profil Pengguna">
-            <a href="profile.html" title="Profil Pengguna">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-              <span>Profil Pengguna</span>
-            </a>
-          </li>
+          <li class="nav-item" data-tooltip="Form Input"><a href="forms.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg><span>Form Input</span></a></li>
+          <li class="nav-item" data-tooltip="Variasi Tombol"><a href="buttons.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="6"></rect><circle cx="8" cy="12" r="3"></circle></svg><span>Variasi Tombol</span></a></li>
+          <li class="nav-item" data-tooltip="Halaman Blog"><a href="blog.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg><span>Halaman Blog</span></a></li>
+          <li class="nav-item" data-tooltip="Profil Pengguna"><a href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span>Profil Pengguna</span></a></li>
         </ul>
 
-        <div class="sidebar-section-title">HALAMAN ERROR</div>
+        <div class="sidebar-section-title">ADMINISTRASI & OPERASIONAL</div>
         <ul class="nav-menu">
-          <li class="nav-item"><a href="403.html"><span>Error 403 (Forbidden)</span></a></li>
-          <li class="nav-item"><a href="404.html"><span>Error 404 (Not Found)</span></a></li>
-          <li class="nav-item"><a href="500.html"><span>Error 500 (Internal Error)</span></a></li>
-          <li class="nav-item"><a href="503.html"><span>Error 503 (Maintenance)</span></a></li>
+          <li class="nav-item" data-tooltip="User Management"><a href="users.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>User Management</span></a></li>
+          <li class="nav-item" data-tooltip="Laporan & Analitik"><a href="reports.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg><span>Laporan & Analitik</span></a></li>
+          <li class="nav-item" data-tooltip="Jadwal & Task"><a href="calendar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg><span>Jadwal & Kalender</span></a></li>
+          <li class="nav-item" data-tooltip="Log Aktivitas"><a href="activity-log.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg><span>Activity Log</span></a></li>
         </ul>
 
-        <div class="sidebar-section-title">AUTENTIKASI</div>
+        <div class="sidebar-section-title">PENGATURAN</div>
         <ul class="nav-menu">
-          <li class="nav-item"><a href="login.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg><span>Login</span></a></li>
-          <li class="nav-item"><a href="register.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg><span>Register</span></a></li>
+          <li class="nav-item" data-tooltip="Pengaturan Akun"><a href="account-settings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg><span>Pengaturan Akun</span></a></li>
+          <li class="nav-item" data-tooltip="Pengaturan Sistem"><a href="system-settings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg><span>Pengaturan Sistem</span></a></li>
         </ul>
       </div>
 
@@ -106,211 +68,277 @@
           <div class="timer-circle">
             <svg class="timer-svg" viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="44" /><circle class="meter" cx="50" cy="50" r="44" /></svg>
             <div class="timer-text">00:56</div>
-            <div class="timer-sub">Waktu Sesi Aktif<br>Server Stabil</div>
+          </div>
+          <div class="timer-info">
+            <div class="timer-label">SIKLUS PENDINGINAN</div>
+            <div class="timer-status">BERJALAN NORMAL</div>
           </div>
         </div>
-        <div class="sidebar-footer-text">Sistem Operasional v2.4</div>
       </div>
     </aside>
 
     <!-- Main Content -->
     <main class="main-content">
-      <header class="top-header">
-        <div class="header-left">
-          <button class="sidebar-toggle-btn" title="Toggle Sidebar">
-            <span></span><span></span><span></span>
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="topbar-btn sidebar-toggle-btn" title="Toggle Sidebar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
           </button>
+          <div class="page-title-badge">Data Tabel & Logistik</div>
         </div>
 
-        <div class="header-actions">
-          <button class="btn btn-teal btn-pill" data-modal-target="addModal">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-            Tambah Pesanan
+        <div class="topbar-right">
+          <button class="topbar-btn" title="Pencarian Cepat (Ctrl+K)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           </button>
-          <button class="icon-btn-neumorphic" title="Notifikasi Baru">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
-            <span class="notification-badge">5</span>
+          <button class="topbar-btn notif-btn" title="Notifikasi Baru">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            <span class="badge-dot" id="ajoNotifBadge"></span>
           </button>
-          <a href="profile.html" class="user-avatar-btn" title="Profil Jessica Miller">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80" alt="Avatar">
-          </a>
+          <button class="topbar-btn" id="topbarThemeCustomizer" title="Kustomisasi Tema" onclick="window.ajoFramework.openThemeCustomizer()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          </button>
+          <div class="user-profile">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Avatar" class="avatar-sm">
+            <span class="user-name">Jessica</span>
+          </div>
         </div>
       </header>
 
-      <!-- Navigasi Halaman -->
-      <div class="page-navigation-header">
-        <h1 class="page-title">Data Tabel</h1>
-        <div class="page-breadcrumb">
-          <a href="index.html">Home</a>
-          <span class="separator">/</span>
-          <span class="current">Data Tabel</span>
-        </div>
-      </div>
+      <div class="dashboard-scroll">
+        <div class="content-body" style="padding: 24px 30px;">
 
-      <!-- Tabel 1: Standard Hover Cards Table with Pagination -->
-      <div class="nm-card" style="margin-bottom: 24px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
-          <div>
-            <h3 class="card-title">1. Tabel Transaksi Utama (Hover Floating Rows)</h3>
-            <p class="card-subtitle" style="margin-bottom: 0;">Laporan pengiriman hasil laut ke restoran rekanan</p>
+          <!-- Tabel 1: Advanced Orders Logistics Table -->
+          <div style="background: var(--nm-flat); padding: 24px; border-radius: var(--card-radius); box-shadow: var(--shadow-raised); margin-bottom: 30px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 14px;">
+              <div>
+                <h2 style="font-size: 1.2rem; font-weight: 700; color: var(--text-main); margin: 0;">1. Transaksi & Distribusi Hasil Laut (Interactive Controller)</h2>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">Pencarian instan, filter status logistik, sorting kolom, dan ekspor CSV</div>
+              </div>
+
+              <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+                <input type="text" id="ordersTable_search" class="nm-input" placeholder="Cari ID, mitra, item..." style="min-width: 200px; padding: 8px 14px; border-radius: 12px; font-size: 0.85rem;">
+                
+                <select id="ordersTable_filter_status" class="nm-input" style="padding: 8px 14px; border-radius: 12px; font-size: 0.85rem;">
+                  <option value="">Semua Status Logistik</option>
+                  <option value="Delivered">Delivered</option>
+                  <option value="In Transit">In Transit</option>
+                  <option value="Processing">Processing</option>
+                  <option value="Returned">Returned</option>
+                </select>
+
+                <select id="ordersTable_pagesize" class="nm-input" style="padding: 8px 10px; border-radius: 12px; font-size: 0.85rem;">
+                  <option value="5" selected>5 per hal</option>
+                  <option value="10">10 per hal</option>
+                  <option value="25">25 per hal</option>
+                </select>
+
+                <button class="btn btn-nm btn-sm" id="ordersTable_export_btn">Unduh CSV</button>
+                <button class="btn btn-primary btn-sm" data-modal-target="addOrderModal">+ Pesanan</button>
+              </div>
+            </div>
+
+            <!-- Table Container -->
+            <div style="overflow-x: auto;">
+              <table class="nm-table" style="width: 100%; border-collapse: separate; border-spacing: 0 10px;">
+                <thead>
+                  <tr style="color: var(--text-muted); font-size: 0.82rem; text-align: left;">
+                    <th style="padding: 12px 16px; width: 40px;"><input type="checkbox" id="ordersTable_select_all" style="accent-color: var(--teal-btn);"></th>
+                    <th style="padding: 12px 16px;">KODE PESANAN</th>
+                    <th style="padding: 12px 16px;">MITRA / RESTORAN</th>
+                    <th style="padding: 12px 16px;">KOMODITAS IKAN</th>
+                    <th style="padding: 12px 16px;">TOTAL BIAYA</th>
+                    <th style="padding: 12px 16px;">TANGGAL</th>
+                    <th style="padding: 12px 16px;">STATUS PENGIRIMAN</th>
+                    <th style="padding: 12px 16px;">STATUS PEMBAYARAN</th>
+                    <th style="padding: 12px 16px; text-align: right;">AKSI</th>
+                  </tr>
+                </thead>
+                <tbody id="ordersTable_body">
+                  <!-- Rendered dynamically by AjoTableController -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Footer Pagination -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px; flex-wrap: wrap; gap: 12px;">
+              <div style="font-size: 0.85rem; color: var(--text-muted);" id="ordersTable_info">Memuat data pesanan...</div>
+              <div style="display: flex; gap: 6px;" id="ordersTable_pagination"></div>
+            </div>
           </div>
-          <div style="display: flex; gap: 10px;">
-            <input type="text" class="nm-input" placeholder="Cari nama mitra atau invoice..." style="width: 240px; padding: 8px 14px; font-size: 12.5px;">
-            <button class="btn btn-nm btn-sm">Saring Data</button>
+
+          <!-- Tabel 2: Cold Storage Inventory Table -->
+          <div id="inventorySection" style="background: var(--nm-flat); padding: 24px; border-radius: var(--card-radius); box-shadow: var(--shadow-raised);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 14px;">
+              <div>
+                <h2 style="font-size: 1.2rem; font-weight: 700; color: var(--text-main); margin: 0;">2. Monitoring Inventaris Stok Ikan & Cold Storage</h2>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">Audit ketersediaan ikan segar, lokasi rak freezer, dan telemetri suhu</div>
+              </div>
+
+              <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+                <input type="text" id="inventoryTable_search" class="nm-input" placeholder="Cari SKU, komoditas..." style="min-width: 200px; padding: 8px 14px; border-radius: 12px; font-size: 0.85rem;">
+                <button class="btn btn-nm btn-sm" id="inventoryTable_export_btn">Unduh CSV</button>
+              </div>
+            </div>
+
+            <div style="overflow-x: auto;">
+              <table class="nm-table" style="width: 100%; border-collapse: separate; border-spacing: 0 10px;">
+                <thead>
+                  <tr style="color: var(--text-muted); font-size: 0.82rem; text-align: left;">
+                    <th style="padding: 12px 16px; width: 40px;"><input type="checkbox" id="inventoryTable_select_all" style="accent-color: var(--teal-btn);"></th>
+                    <th style="padding: 12px 16px;">SKU</th>
+                    <th style="padding: 12px 16px;">NAMA KOMODITAS</th>
+                    <th style="padding: 12px 16px;">KATEGORI</th>
+                    <th style="padding: 12px 16px;">TONASE STOK</th>
+                    <th style="padding: 12px 16px;">LOKASI RAK</th>
+                    <th style="padding: 12px 16px;">SUHU STORAGE</th>
+                    <th style="padding: 12px 16px;">STATUS STOK</th>
+                  </tr>
+                </thead>
+                <tbody id="inventoryTable_body">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px; flex-wrap: wrap; gap: 12px;">
+              <div style="font-size: 0.85rem; color: var(--text-muted);" id="inventoryTable_info">Memuat data inventaris...</div>
+              <div style="display: flex; gap: 6px;" id="inventoryTable_pagination"></div>
+            </div>
           </div>
-        </div>
 
-        <div class="table-responsive">
-          <table class="nm-table">
-            <thead>
-              <tr>
-                <th>PELANGGAN / MITRA</th>
-                <th>JENIS IKAN / KOMODITAS</th>
-                <th>TANGGAL PENGIRIMAN</th>
-                <th>TOTAL TRANSAKSI</th>
-                <th>STATUS PESANAN</th>
-                <th style="text-align: right;">AKSI</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div style="display: flex; align-items: center; gap: 12px;">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;">
-                    <div><div style="font-weight: 600;">Restoran Sederhana Padang</div><div style="font-size: 11px; color: var(--text-muted);">sederhana.pdg@gmail.com</div></div>
-                  </div>
-                </td>
-                <td>Kakap Merah Segar (120 Kg)</td>
-                <td>28 Okt 2026</td>
-                <td style="font-weight: 600; color: #2ecc71;">Rp 9.600.000</td>
-                <td><span class="status-badge badge-success">Terkirim</span></td>
-                <td style="text-align: right;"><button class="btn btn-nm btn-sm" data-modal-target="addModal">Detail</button></td>
-              </tr>
-              <tr>
-                <td>
-                  <div style="display: flex; align-items: center; gap: 12px;">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;">
-                    <div><div style="font-weight: 600;">Rumah Makan Selamat Bukittinggi</div><div style="font-size: 11px; color: var(--text-muted);">rm.selamat@yahoo.com</div></div>
-                  </div>
-                </td>
-                <td>Ikan Tongkol Sisik (85 Kg)</td>
-                <td>27 Okt 2026</td>
-                <td style="font-weight: 600; color: #3b4158;">Rp 3.400.000</td>
-                <td><span class="status-badge badge-warning">Dalam Perjalanan</span></td>
-                <td style="text-align: right;"><button class="btn btn-nm btn-sm">Detail</button></td>
-              </tr>
-              <tr>
-                <td>
-                  <div style="display: flex; align-items: center; gap: 12px;">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;">
-                    <div><div style="font-weight: 600;">Depot Ikan Basah Muaro</div><div style="font-size: 11px; color: var(--text-muted);">muarofish@outlet.id</div></div>
-                  </div>
-                </td>
-                <td>Tenggiri Pilihan (40 Kg)</td>
-                <td>26 Okt 2026</td>
-                <td style="font-weight: 600; color: #e74c3c;">- Rp 1.200.000</td>
-                <td><span class="status-badge badge-danger">Retur Rusak</span></td>
-                <td style="text-align: right;"><button class="btn btn-nm btn-sm">Detail</button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="pagination-wrapper">
-          <span style="font-size: 12px; color: var(--text-muted);">Menampilkan 1 - 3 dari 48 transaksi</span>
-          <div class="pagination-controls">
-            <button class="page-btn">«</button>
-            <button class="page-btn active">1</button>
-            <button class="page-btn">2</button>
-            <button class="page-btn">3</button>
-            <button class="page-btn">»</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tabel 2: Compact Striped Inventory Table -->
-      <div class="nm-card">
-        <div style="margin-bottom: 16px;">
-          <h3 class="card-title">2. Tabel Inventaris Cold Storage (Compact Table)</h3>
-          <p class="card-subtitle" style="margin-bottom: 0;">Monitoring sisa kapasitas rak dan temperatur penyimpanan</p>
-        </div>
-
-        <div class="table-responsive">
-          <table class="nm-table table-compact table-striped">
-            <thead>
-              <tr>
-                <th>KODE RAK</th>
-                <th>LOKASI GUDANG</th>
-                <th>KAPASITAS TERISI</th>
-                <th>TEMPERATUR RUANG</th>
-                <th>STATUS KUALITAS</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>#RAK-01A</strong></td>
-                <td>Cold Storage Padang Sentral</td>
-                <td><div class="progress-track" style="height: 6px; width: 120px;"><div class="progress-bar teal" style="width: 85%;"></div></div></td>
-                <td><span style="color: #27ae60; font-weight: 600;">-18.4°C (Normal)</span></td>
-                <td><span class="status-badge badge-success">Sangat Baik</span></td>
-              </tr>
-              <tr>
-                <td><strong>#RAK-02B</strong></td>
-                <td>Pangkalan Bungus Muaro</td>
-                <td><div class="progress-track" style="height: 6px; width: 120px;"><div class="progress-bar yellow" style="width: 60%;"></div></div></td>
-                <td><span style="color: #27ae60; font-weight: 600;">-17.9°C (Normal)</span></td>
-                <td><span class="status-badge badge-info">Optimal</span></td>
-              </tr>
-              <tr>
-                <td><strong>#RAK-03C</strong></td>
-                <td>Pariaman Hub Utara</td>
-                <td><div class="progress-track" style="height: 6px; width: 120px;"><div class="progress-bar" style="width: 92%; background: #f06a88;"></div></div></td>
-                <td><span style="color: #e74c3c; font-weight: 600;">-12.1°C (Waspada)</span></td>
-                <td><span class="status-badge badge-warning">Pengecekan Kompresor</span></td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </main>
   </div>
 
-  <!-- Modal Tambah Data / Pop-up -->
-  <div class="nm-modal-backdrop" id="addModal">
-    <div class="nm-modal">
-      <div class="modal-header">
-        <h3 class="modal-title">Tambah Pesanan Baru</h3>
-        <button class="modal-close" data-modal-close>&times;</button>
+  <!-- Modal Tambah Pesanan -->
+  <div class="nm-modal-backdrop" id="addOrderModal">
+    <div class="nm-modal" style="max-width: 500px; border-radius: var(--card-radius); background: var(--nm-flat); padding: 24px; box-shadow: var(--shadow-raised);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin: 0;">Tambah Pesanan Baru</h3>
+        <button class="modal-close" data-modal-close style="border: none; background: none; font-size: 1.5rem; cursor: pointer; color: var(--text-muted);">&times;</button>
       </div>
-      <div>
-        <div class="form-group">
-          <label class="nm-label">Nama Mitra / Restoran</label>
-          <input type="text" class="nm-input" placeholder="Masukkan nama mitra">
+
+      <form id="addOrderForm" onsubmit="handleCreateOrder(event)">
+        <div class="form-group" style="margin-bottom: 14px;">
+          <label class="nm-label">Nama Restoran / Mitra</label>
+          <input type="text" class="nm-input" id="order_customer" placeholder="Misal: Hotel Pangeran Beach" required>
         </div>
-        <div class="form-group">
-          <label class="nm-label">Jenis Komoditas Ikan</label>
-          <input type="text" class="nm-input" placeholder="Contoh: Kakap Merah, Tongkol">
+        <div class="form-group" style="margin-bottom: 14px;">
+          <label class="nm-label">Komoditas & Berat</label>
+          <input type="text" class="nm-input" id="order_items" placeholder="Misal: Kakap Merah Segar (150 Kg)" required>
         </div>
-        <div class="form-group">
-          <label class="nm-label">Total Nilai Pembayaran (Rp)</label>
-          <input type="number" class="nm-input" placeholder="0">
+        <div class="form-group" style="margin-bottom: 14px;">
+          <label class="nm-label">Total Pembayaran (Rp)</label>
+          <input type="number" class="nm-input" id="order_total" placeholder="12000000" required>
         </div>
-        <div class="form-group">
-          <label class="nm-label">Status Pengiriman</label>
-          <select class="nm-select">
-            <option>Terkirim</option>
-            <option>Dalam Perjalanan</option>
-            <option>Menunggu Konfirmasi</option>
-          </select>
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label class="nm-label">Armada Pengantar</label>
+          <input type="text" class="nm-input" id="order_driver" placeholder="Armada 01 (ThermoKing)" required>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-nm" data-modal-close>Batal</button>
-        <button class="btn btn-teal" data-modal-close>Simpan Pesanan</button>
-      </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px;">
+          <button type="button" class="btn btn-nm" data-modal-close>Batal</button>
+          <button type="submit" class="btn btn-primary">Simpan Pesanan</button>
+        </div>
+      </form>
     </div>
   </div>
 
+  <script src="asset/data/mock-data.js"></script>
+  <script src="asset/js/api-service.js"></script>
+  <script src="asset/js/table-controller.js"></script>
+  <script src="asset/js/app-framework.js"></script>
   <script src="asset/script.js"></script>
+  <script>
+    let ordersController = null;
+    let inventoryController = null;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Inisialisasi Tabel Pesanan
+      ordersController = new AjoTableController({
+        tableId: "ordersTable",
+        resourceKey: "orders",
+        pageSize: 5,
+        defaultSort: "orderDate",
+        columns: [
+          { key: "orderId", label: "Kode Pesanan", sortable: true, render: (val) => `<strong style="color: var(--teal-btn); font-weight: 600;">${val}</strong>` },
+          { key: "customer", label: "Mitra / Restoran", sortable: true, render: (val) => `<span style="font-weight: 600; color: var(--text-main);">${val}</span>` },
+          { key: "items", label: "Komoditas", sortable: false },
+          { key: "total", label: "Total Biaya", sortable: true, render: (val) => `<span style="font-weight: 600; color: var(--purple-btn);">Rp ${Number(val).toLocaleString("id-ID")}</span>` },
+          { key: "orderDate", label: "Tanggal", sortable: true },
+          { 
+            key: "deliveryStatus", 
+            label: "Status Pengiriman", 
+            sortable: true, 
+            render: (val) => `<span class="badge ${val === 'Delivered' ? 'badge-success' : (val === 'In Transit' ? 'badge-info' : (val === 'Processing' ? 'badge-warning' : 'badge-danger'))}">${val}</span>` 
+          },
+          { 
+            key: "paymentStatus", 
+            label: "Status Pembayaran", 
+            sortable: true, 
+            render: (val) => `<span class="badge ${val === 'Paid' ? 'badge-success' : (val === 'Pending' ? 'badge-warning' : 'badge-danger')}">${val}</span>` 
+          },
+          {
+            key: "orderId",
+            label: "Aksi",
+            sortable: false,
+            render: (val) => `<div style="text-align: right;"><button class="btn btn-nm btn-sm" onclick="alert('Detail pesanan: ' + '${val}')">Detail</button></div>`
+          }
+        ]
+      });
+
+      // 2. Inisialisasi Tabel Inventaris Rak
+      inventoryController = new AjoTableController({
+        tableId: "inventoryTable",
+        resourceKey: "inventory",
+        pageSize: 5,
+        defaultSort: "weight",
+        columns: [
+          { key: "sku", label: "SKU", sortable: true, render: (val) => `<strong style="color: var(--teal-btn);">${val}</strong>` },
+          { key: "name", label: "Nama Komoditas", sortable: true, render: (val) => `<span style="font-weight: 600; color: var(--text-main);">${val}</span>` },
+          { key: "category", label: "Kategori", sortable: true },
+          { key: "weight", label: "Tonase Stok", sortable: true, render: (val, row) => `<strong style="color: var(--text-main);">${val} ${row.unit}</strong>` },
+          { key: "rack", label: "Lokasi Rak", sortable: true, render: (val) => `<span class="badge badge-info">${val}</span>` },
+          { key: "temp", label: "Suhu Storage", sortable: true, render: (val) => `<span style="font-weight: 600; color: ${val > -16 ? '#e74c3c' : '#2ecc71'};">${val} °C</span>` },
+          { 
+            key: "status", 
+            label: "Status Stok", 
+            sortable: true, 
+            render: (val) => `<span class="badge ${val === 'In Stock' ? 'badge-success' : 'badge-warning'}">${val}</span>` 
+          }
+        ]
+      });
+    });
+
+    async function handleCreateOrder(e) {
+      e.preventDefault();
+      const customer = document.getElementById("order_customer").value.trim();
+      const items = document.getElementById("order_items").value.trim();
+      const total = parseInt(document.getElementById("order_total").value, 10);
+      const driver = document.getElementById("order_driver").value.trim();
+
+      const newOrder = {
+        orderId: `ORD-2026-${Math.floor(887 + Math.random() * 100)}`,
+        customer,
+        items,
+        total,
+        orderDate: new Date().toISOString().slice(0, 10),
+        destination: "Kota Padang",
+        deliveryStatus: "Processing",
+        paymentStatus: "Pending",
+        driver
+      };
+
+      await window.ajoApi.saveItem("orders", newOrder);
+      document.getElementById("addOrderModal").classList.remove("open");
+      document.getElementById("addOrderForm").reset();
+
+      // Refresh table
+      await ordersController.init();
+      window.ajoFramework.showToast("success", "Pesanan Dibuat", `Pesanan #${newOrder.orderId} berhasil ditambahkan ke jadwal.`);
+    }
+  </script>
 </body>
 </html>

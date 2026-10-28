@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadwal & Kalender - ajogalehlauak</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="asset/style.css">
+</head>
+<body>
+
+  <div class="dashboard-container">
+    <div class="sidebar-backdrop"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div class="sidebar-header">
+          <div class="logo-text-wrapper">
+            <span class="logo-text-full">ajogalehlauak</span>
+            <span class="logo-text-short">ajo</span>
+          </div>
+        </div>
+
+        <div class="sidebar-section-title">MENU UTAMA</div>
+        <ul class="nav-menu">
+          <li class="nav-item" data-tooltip="Dashboard"><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><span>Dashboard</span></a></li>
+          <li class="nav-item has-submenu" data-tooltip="Statistik & Analitik">
+            <a href="charts.html" class="submenu-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg><span>Daftar Chart</span><svg class="submenu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+            <ul class="submenu">
+              <li class="submenu-item"><a href="charts.html">Semua Chart</a></li>
+              <li class="submenu-item"><a href="charts.html#spline">Penjualan Harian</a></li>
+              <li class="submenu-item"><a href="charts.html#gauges">Kapasitas Gudang</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-submenu" data-tooltip="Data Tabel">
+            <a href="tables.html" class="submenu-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line><line x1="12" y1="3" x2="12" y2="21"></line></svg><span>Data Tabel</span><svg class="submenu-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+            <ul class="submenu">
+              <li class="submenu-item"><a href="tables.html">Daftar Transaksi</a></li>
+              <li class="submenu-item"><a href="tables.html#inventory">Inventaris Rak</a></li>
+            </ul>
+          </li>
+          <li class="nav-item" data-tooltip="Form Input"><a href="forms.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg><span>Form Input</span></a></li>
+          <li class="nav-item" data-tooltip="Variasi Tombol"><a href="buttons.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="6"></rect><circle cx="8" cy="12" r="3"></circle></svg><span>Variasi Tombol</span></a></li>
+          <li class="nav-item" data-tooltip="Halaman Blog"><a href="blog.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg><span>Halaman Blog</span></a></li>
+          <li class="nav-item" data-tooltip="Profil Pengguna"><a href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span>Profil Pengguna</span></a></li>
+        </ul>
+
+        <div class="sidebar-section-title">ADMINISTRASI & OPERASIONAL</div>
+        <ul class="nav-menu">
+          <li class="nav-item" data-tooltip="User Management"><a href="users.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>User Management</span></a></li>
+          <li class="nav-item" data-tooltip="Laporan & Analitik"><a href="reports.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg><span>Laporan & Analitik</span></a></li>
+          <li class="nav-item active" data-tooltip="Jadwal & Task"><a href="calendar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg><span>Jadwal & Kalender</span></a></li>
+          <li class="nav-item" data-tooltip="Log Aktivitas"><a href="activity-log.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg><span>Activity Log</span></a></li>
+        </ul>
+
+        <div class="sidebar-section-title">PENGATURAN</div>
+        <ul class="nav-menu">
+          <li class="nav-item" data-tooltip="Pengaturan Akun"><a href="account-settings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg><span>Pengaturan Akun</span></a></li>
+          <li class="nav-item" data-tooltip="Pengaturan Sistem"><a href="system-settings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg><span>Pengaturan Sistem</span></a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="timer-card">
+          <div class="timer-circle">
+            <svg class="timer-svg" viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="44" /><circle class="meter" cx="50" cy="50" r="44" /></svg>
+            <div class="timer-text">00:56</div>
+          </div>
+          <div class="timer-info">
+            <div class="timer-label">SIKLUS PENDINGINAN</div>
+            <div class="timer-status">BERJALAN NORMAL</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="topbar-btn sidebar-toggle-btn" title="Toggle Sidebar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <div class="page-title-badge">Jadwal & Task Operasional</div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="topbar-btn" title="Pencarian Cepat (Ctrl+K)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+          <button class="topbar-btn notif-btn" title="Notifikasi Baru">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            <span class="badge-dot" id="ajoNotifBadge"></span>
+          </button>
+          <button class="topbar-btn" id="topbarThemeCustomizer" title="Kustomisasi Tema" onclick="window.ajoFramework.openThemeCustomizer()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          </button>
+          <div class="user-profile">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Avatar" class="avatar-sm">
+            <span class="user-name">Jessica</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="dashboard-scroll">
+        <div class="content-body" style="padding: 24px 30px;">
+
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 24px;">
+
+            <!-- Left: Calendar Grid View -->
+            <div style="background: var(--nm-flat); padding: 24px; border-radius: var(--card-radius); box-shadow: var(--shadow-raised);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <div>
+                  <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--text-main); margin: 0;">Oktober 2026</h2>
+                  <div style="font-size: 0.85rem; color: var(--text-muted);">Jadwal Operasional Cold Storage & Tangkapan Nelayan</div>
+                </div>
+                <div style="display: flex; gap: 8px;">
+                  <button class="btn btn-nm btn-sm">‹</button>
+                  <button class="btn btn-nm btn-sm">Hari Ini</button>
+                  <button class="btn btn-nm btn-sm">›</button>
+                </div>
+              </div>
+
+              <!-- Calendar Day Header -->
+              <div style="display: grid; grid-template-columns: repeat(7, 1fr); text-align: center; font-weight: 600; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">
+                <div>SEN</div><div>SEL</div><div>RAB</div><div>KAM</div><div>JUM</div><div>SAB</div><div>MIN</div>
+              </div>
+
+              <!-- Calendar Grid Matrix -->
+              <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px;" id="calendarMatrix">
+                <!-- Example Cells -->
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft); opacity: 0.4;">28</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft); opacity: 0.4;">29</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft); opacity: 0.4;">30</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">1</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">2</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">3</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">4</div>
+
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">5</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">6</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">7</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">8</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">9</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">10</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">11</div>
+
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">12</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">13</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">14</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">15</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">16</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">17</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">18</div>
+
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">19</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">20</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">21</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">22</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">23</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">24</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">25</div>
+
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">26</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">27</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--teal-btn); color: #fff; font-weight: 700; box-shadow: var(--shadow-raised);">
+                  28
+                  <div style="font-size: 0.65rem; margin-top: 4px; background: rgba(0,0,0,0.2); padding: 2px 4px; border-radius: 4px;">2 Event</div>
+                </div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">
+                  29
+                  <div style="font-size: 0.65rem; margin-top: 4px; color: var(--purple-btn);">Distribusi</div>
+                </div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">
+                  30
+                  <div style="font-size: 0.65rem; margin-top: 4px; color: var(--pink-accent);">Audit</div>
+                </div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">31</div>
+                <div style="aspect-ratio: 1; padding: 8px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft); opacity: 0.4;">1</div>
+              </div>
+
+              <!-- Event Details List Under Calendar -->
+              <div style="margin-top: 24px;">
+                <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--text-main); margin-bottom: 12px;">Agenda Mendatang (Minggu Ini)</h4>
+                <div id="eventsContainer" style="display: flex; flex-direction: column; gap: 10px;">
+                  <!-- Dynamically rendered -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Tasks & Checklist -->
+            <div>
+              <div style="background: var(--nm-flat); padding: 24px; border-radius: var(--card-radius); box-shadow: var(--shadow-raised); margin-bottom: 24px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                  <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 600; margin: 0;">Tugas & Checklist</h3>
+                  <button class="btn btn-primary btn-sm" onclick="addNewTaskPrompt()">+ Tambah</button>
+                </div>
+
+                <div id="taskList" style="display: flex; flex-direction: column; gap: 12px;">
+                  <!-- Dynamically populated -->
+                </div>
+              </div>
+
+              <!-- Quick Shift Team Card -->
+              <div style="background: var(--nm-flat); padding: 24px; border-radius: var(--card-radius); box-shadow: var(--shadow-raised);">
+                <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 600; margin-bottom: 14px;">Petugas Piket Hari Ini</h3>
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                  <div style="display: flex; align-items: center; gap: 12px; padding: 10px; border-radius: 12px; box-shadow: var(--shadow-inset);">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" class="avatar-sm" style="width: 36px; height: 36px; border-radius: 50%;">
+                    <div>
+                      <strong style="font-size: 0.9rem; color: var(--text-main);">Rizky Pratama</strong>
+                      <div style="font-size: 0.75rem; color: var(--text-muted);">Manager Shift Siang (07:00 - 15:00)</div>
+                    </div>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 12px; padding: 10px; border-radius: 12px; box-shadow: var(--shadow-inset);">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" class="avatar-sm" style="width: 36px; height: 36px; border-radius: 50%;">
+                    <div>
+                      <strong style="font-size: 0.9rem; color: var(--text-main);">Ahmad Hidayat</strong>
+                      <div style="font-size: 0.75rem; color: var(--text-muted);">Teknisi Cold Storage (08:00 - 17:00)</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="asset/data/mock-data.js"></script>
+  <script src="asset/js/api-service.js"></script>
+  <script src="asset/js/app-framework.js"></script>
+  <script src="asset/script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      renderEvents();
+      renderTasks();
+    });
+
+    async function renderEvents() {
+      const events = await window.ajoApi.getCollection("calendar_events");
+      const container = document.getElementById("eventsContainer");
+      if (!container) return;
+
+      container.innerHTML = events.map(e => `
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-pill);">
+          <div>
+            <div style="font-weight: 600; color: var(--text-main); font-size: 0.92rem;">${e.title}</div>
+            <div style="font-size: 0.78rem; color: var(--text-muted); display: flex; gap: 10px; margin-top: 4px;">
+              <span>📅 ${e.date} (${e.time})</span>
+              <span>📍 ${e.location}</span>
+            </div>
+          </div>
+          <span class="badge ${e.priority === 'Tinggi' ? 'badge-danger' : (e.priority === 'Penting' ? 'badge-warning' : 'badge-primary')}">${e.priority}</span>
+        </div>
+      `).join("");
+    }
+
+    async function renderTasks() {
+      const tasks = await window.ajoApi.getCollection("tasks");
+      const list = document.getElementById("taskList");
+      if (!list) return;
+
+      list.innerHTML = tasks.map(t => `
+        <div style="display: flex; align-items: flex-start; gap: 12px; padding: 12px; border-radius: 12px; background: var(--nm-flat); box-shadow: var(--shadow-soft);">
+          <input type="checkbox" ${t.status === 'Completed' ? 'checked' : ''} onchange="toggleTaskStatus('${t.id}')" style="margin-top: 4px; accent-color: var(--teal-btn); width: 18px; height: 18px;">
+          <div style="flex: 1;">
+            <div style="font-weight: 500; font-size: 0.88rem; color: var(--text-main); ${t.status === 'Completed' ? 'text-decoration: line-through; opacity: 0.6;' : ''}">
+              ${t.title}
+            </div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; display: flex; justify-content: space-between;">
+              <span>👤 ${t.assignee}</span>
+              <span>⏱ ${t.dueDate}</span>
+            </div>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    async function toggleTaskStatus(id) {
+      const tasks = await window.ajoApi.getCollection("tasks");
+      const t = tasks.find(x => x.id === id);
+      if (t) {
+        t.status = t.status === "Completed" ? "Pending" : "Completed";
+        localStorage.setItem("ajo_tasks", JSON.stringify(tasks));
+        renderTasks();
+        window.ajoFramework.showToast("info", "Status Tugas", `Tugas ${t.id} diperbarui.`);
+      }
+    }
+
+    async function addNewTaskPrompt() {
+      const title = prompt("Masukkan nama tugas operasional baru:");
+      if (!title || !title.trim()) return;
+
+      const newTask = {
+        id: `TSK-${Date.now().toString().slice(-3)}`,
+        title: title.trim(),
+        dueDate: "2026-10-31",
+        priority: "Sedang",
+        category: "Operasional",
+        status: "Pending",
+        assignee: "Jessica Miller"
+      };
+
+      await window.ajoApi.saveItem("tasks", newTask);
+      renderTasks();
+      window.ajoFramework.showToast("success", "Tugas Ditambahkan", "Tugas baru telah tersimpan di kalender operasional.");
+    }
+  </script>
+</body>
+</html>
