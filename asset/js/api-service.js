@@ -32,6 +32,25 @@ class AjoApiService {
     if (!localStorage.getItem("ajo_tasks")) {
       localStorage.getItem("ajo_tasks") || localStorage.setItem("ajo_tasks", JSON.stringify(window.AjoData.tasks));
     }
+    if (!localStorage.getItem("ajo_blog_articles")) {
+      localStorage.setItem("ajo_blog_articles", JSON.stringify(window.AjoData.blogArticles || []));
+    } else {
+      // Sinkronisasi field gambar jika versi lama di LocalStorage belum memiliki image
+      try {
+        const stored = JSON.parse(localStorage.getItem("ajo_blog_articles") || "[]");
+        if (stored.length && !stored[0].image && window.AjoData && window.AjoData.blogArticles) {
+          const mapImages = new Map((window.AjoData.blogArticles || []).map(a => [a.id, a.image]));
+          stored.forEach(item => {
+            if (!item.image && mapImages.has(item.id)) {
+              item.image = mapImages.get(item.id);
+            }
+          });
+          localStorage.setItem("ajo_blog_articles", JSON.stringify(stored));
+        }
+      } catch (err) {
+        console.warn("Gagal sinkronisasi gambar artikel:", err);
+      }
+    }
   }
 
   // Helper HTTP Header (Simulasi Authorization)

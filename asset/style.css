@@ -1135,7 +1135,7 @@ body {
 .main-content {
   flex: 1;
   min-width: 0;
-  padding: 24px 32px 40px 32px;
+  padding: 88px 32px 40px 32px;
   display: flex;
   flex-direction: column;
   gap: 22px;
@@ -1346,11 +1346,13 @@ body {
 }
 
 /* Solid Buttons */
+.btn-primary,
 .btn-teal {
   background: #38c8a7;
   color: #fff;
   box-shadow: 0 4px 12px rgba(56, 200, 167, 0.4);
 }
+.btn-primary:hover,
 .btn-teal:hover { background: #31b395; }
 
 .btn-purple {

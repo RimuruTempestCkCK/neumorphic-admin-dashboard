@@ -173,22 +173,22 @@ class AjoFramework {
 
   getCommandList() {
     return [
-      { category: "Halaman Utama", title: "Buka Dashboard Utama", url: "index.html", icon: "📊" },
-      { category: "Halaman Utama", title: "Buka Galeri Chart & Statistik", url: "charts.html", icon: "📈" },
-      { category: "Halaman Utama", title: "Buka Data Tabel & Logistik", url: "tables.html", icon: "📋" },
-      { category: "Halaman Utama", title: "Buka Komponen Form Input", url: "forms.html", icon: "📝" },
-      { category: "Halaman Utama", title: "Buka Variasi Tombol UI", url: "buttons.html", icon: "🔘" },
-      { category: "Halaman Utama", title: "Buka Berita & Artikel Blog", url: "blog.html", icon: "📰" },
-      { category: "Halaman Utama", title: "Buka Profil Pengguna", url: "profile.html", icon: "👤" },
-      { category: "Manajemen Administrasi", title: "Manajemen Pengguna (User Management)", url: "users.html", icon: "👥" },
-      { category: "Manajemen Administrasi", title: "Laporan & Analitik Bisnis", url: "reports.html", icon: "📑" },
-      { category: "Manajemen Administrasi", title: "Jadwal & Task Management (Kalender)", url: "calendar.html", icon: "📅" },
-      { category: "Manajemen Administrasi", title: "Log Aktivitas Sistem (Audit Log)", url: "activity-log.html", icon: "📜" },
-      { category: "Pengaturan & Preferensi", title: "Pengaturan Akun Pengguna", url: "account-settings.html", icon: "⚙️" },
-      { category: "Pengaturan & Preferensi", title: "Pengaturan Sistem & Branding", url: "system-settings.html", icon: "🛠️" },
-      { category: "Aksi Cepat", title: "Ganti Tema Gelap / Terang (Dark Mode)", action: () => this.toggleTheme(), icon: "🌓" },
-      { category: "Aksi Cepat", title: "Buka Theme Customizer", action: () => this.openThemeCustomizer(), icon: "🎨" },
-      { category: "Aksi Cepat", title: "Kirim Uji Toast Notifikasi", action: () => this.showToast("success", "Sistem Siap", "Telemetri pangkalan aktif."), icon: "🔔" }
+      { category: "Halaman Utama", title: "Buka Dashboard Utama", url: "index.html" },
+      { category: "Halaman Utama", title: "Buka Galeri Chart & Statistik", url: "charts.html" },
+      { category: "Halaman Utama", title: "Buka Data Tabel & Logistik", url: "tables.html" },
+      { category: "Halaman Utama", title: "Buka Komponen Form Input", url: "forms.html" },
+      { category: "Halaman Utama", title: "Buka Variasi Tombol UI", url: "buttons.html" },
+      { category: "Halaman Utama", title: "Buka Berita & Artikel Blog", url: "blog.html" },
+      { category: "Halaman Utama", title: "Buka Profil Pengguna", url: "profile.html" },
+      { category: "Manajemen Administrasi", title: "Manajemen Pengguna (User Management)", url: "users.html" },
+      { category: "Manajemen Administrasi", title: "Laporan & Analitik Bisnis", url: "reports.html" },
+      { category: "Manajemen Administrasi", title: "Jadwal & Task Management (Kalender)", url: "calendar.html" },
+      { category: "Manajemen Administrasi", title: "Log Aktivitas Sistem (Audit Log)", url: "activity-log.html" },
+      { category: "Pengaturan & Preferensi", title: "Pengaturan Akun Pengguna", url: "account-settings.html" },
+      { category: "Pengaturan & Preferensi", title: "Pengaturan Sistem & Branding", url: "system-settings.html" },
+      { category: "Aksi Cepat", title: "Ganti Tema Gelap / Terang (Dark Mode)", action: () => this.toggleTheme() },
+      { category: "Aksi Cepat", title: "Buka Theme Customizer", action: () => this.openThemeCustomizer() },
+      { category: "Aksi Cepat", title: "Kirim Uji Toast Notifikasi", action: () => this.showToast("success", "Sistem Siap", "Telemetri pangkalan aktif.") }
     ];
   }
 

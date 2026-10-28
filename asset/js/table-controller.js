@@ -141,7 +141,9 @@ class AjoTableController {
       tbody.innerHTML = `
         <tr>
           <td colspan="${this.columns.length + 2}" style="text-align: center; padding: 40px 20px; color: var(--text-muted);">
-            <div style="font-size: 28px; margin-bottom: 8px;">🔍</div>
+            <div style="margin-bottom: 8px;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity: 0.5;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
             <div style="font-weight: 600; font-size: 14px;">Tidak Ada Data yang Ditemukan</div>
             <div style="font-size: 12px; margin-top: 4px;">Coba gunakan kata kunci pencarian atau filter yang berbeda.</div>
           </td>
