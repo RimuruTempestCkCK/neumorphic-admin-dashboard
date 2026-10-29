@@ -6,6 +6,20 @@ Designed for fisheries, logistics cold-chain distribution, and operational comma
 
 ---
 
+## 📸 Preview Dashboard
+
+### Light Mode & Dark Mode
+| Light Mode | Dark Mode |
+| :---: | :---: |
+| ![Dashboard Light Mode](asset/screenshots/dashboard-light.png) | ![Dashboard Dark Mode](asset/screenshots/dashboard-dark.png) |
+
+### Tampilan Responsif (Mobile View)
+<p align="center">
+  <img src="asset/screenshots/dashboard-mobile.png" alt="Dashboard Mobile Responsive View" width="360">
+</p>
+
+---
+
 ## 🌟 Fitur Utama & Arsitektur
 
 ### 1. Neumorphic Design System & Tokens
