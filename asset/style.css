@@ -493,10 +493,12 @@ html, body {
   justify-content: space-between;
   color: #fff;
   transition: width var(--transition-speed) ease, padding var(--transition-speed) ease, transform var(--transition-speed) ease;
-  z-index: 100;
+  z-index: 1000;
   height: 100vh;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  bottom: 0;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -873,13 +875,19 @@ html, body {
 .main-content {
   flex: 1;
   min-width: 0;
-  width: 100%;
-  max-width: 100vw;
+  width: calc(100% - var(--sidebar-w));
+  margin-left: var(--sidebar-w);
   padding: 88px 32px 40px 32px;
   display: flex;
   flex-direction: column;
   gap: 24px;
   overflow-x: hidden;
+  transition: margin-left var(--transition-speed) ease, width var(--transition-speed) ease;
+}
+
+.dashboard-container.sidebar-collapsed .main-content {
+  width: calc(100% - var(--sidebar-collapsed-w));
+  margin-left: var(--sidebar-collapsed-w);
 }
 
 /* Fixed Top Header */
@@ -2498,6 +2506,8 @@ input[type="radio"]:checked ~ .nm-radio {
   }
 
   .main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
     padding: 84px 18px 32px 18px;
     max-width: 100vw;
     overflow-x: hidden;
